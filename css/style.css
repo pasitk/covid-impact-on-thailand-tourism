@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: Helvetica;
+    vertical-align: baseline;
+}
+
+.index-content {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.index-content-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 1.5em;
+    line-height: 1.3;
+}
+
+#index-content-item-1,
+#index-content-item-3 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    border-left: 20px solid #FFC300;
+}
+
+#index-content-item-2 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+    border-right: 20px solid #FFC300;
+}
+
+#index-content-2 {
+    background-image: url("/image/bg-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#index-content-3 {
+    background-image: url("/image/bg-2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.index-content-header-1 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+#bg-video {
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+}
+
+
+.index-control {
+    position: absolute;
+    right: 2vw;
+    bottom: 2vh;
+    z-index: 1;
+}
+
+.ready-to-fade-and-move-up {
+    opacity: 0;
+    transform: translateY(20%);
+}
+
+.ready-to-fade-and-move-down {
+    opacity: 0;
+    transform: translateY(-20%);
+}
