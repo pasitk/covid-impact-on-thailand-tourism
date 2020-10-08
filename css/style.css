@@ -187,13 +187,13 @@ body {
 }
 
 #index-content-2 {
-    background-image: url("/image/bg-1.jpg");
+    background-image: url("../image/bg-1.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #index-content-3 {
-    background-image: url("/image/bg-2.jpg");
+    background-image: url("../image/bg-2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -286,7 +286,7 @@ header {
 }
 
 #article-headline-1 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(117, 19, 93, 0.74)), url("/image/topic-1.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(117, 19, 93, 0.74)), url("../image/topic-1.jpg");
     background-size: cover;
 }
 
