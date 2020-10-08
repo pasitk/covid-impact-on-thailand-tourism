@@ -141,6 +141,10 @@ em {
     font-style: italic;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -159,7 +163,7 @@ body {
 
 .index-content {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 300;
     display: flex;
     flex-direction: row;
@@ -171,7 +175,7 @@ body {
 .index-content-item {
     flex-basis: 0;
     flex-grow: 1;
-    padding: 1.5em;
+    padding: 1.5rem;
     line-height: 1.3;
 }
 
@@ -199,7 +203,7 @@ body {
 }
 
 .index-content-header-1 {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 900;
 }
 
@@ -237,13 +241,16 @@ header {
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    background: #c94b4b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: #c94b4b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4b134f, #c94b4b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 0.8vw 1.5vw 0.8vw 1.5vw;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     z-index: 1;
-  }
+}
 
 .site-name {
     border-left: 5px solid #FFC300;
@@ -251,11 +258,11 @@ header {
 }
 
 .bigger-one {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .smaller-one {
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .author {
@@ -263,25 +270,24 @@ header {
     font-weight: 200;
 }
 
-.desktop-menu {
+/* .desktop-menu {
     width: 60%;
     height: max-content;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
-}
+} */
 
-.desktop-menu > div {
+.desktop-menu>div {
     flex: 1 0 30%;
     padding: 0.5vw;
 }
 
 .article-headline {
-    height: 40vw;
+    height: max-content;
     color: #ffffff;
     vertical-align: bottom;
-    position: relative;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -291,42 +297,43 @@ header {
 }
 
 .article-headline-text-part {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 2.5vw 10vw 2.5vw 10vw;
+    height: max-content;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .headline {
-    font-size: 3em;
+    padding-top: 30vw;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 0.9;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .sub-headline {
-    margin-top: 1vw;
-    font-size: 1.2em;
+    padding-top: 1vw;
+    padding-bottom: 2.5vw;
+    font-size: 1.2rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .content {
     margin: 1em 20vw 1em 10vw;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
 }
 
 .subtopic {
-    margin: 2.5em 10vw 1em 10vw;
+    margin: 2.5vw 10vw 1vw 10vw;
     padding: 1vw;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #FFFFFF;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #subtopic-1 {
-    background: rgb(36,0,16);
-    background: linear-gradient(90deg, rgba(81,13,65,1) 0%, rgba(117,19,93,0.74) 50%, rgba(245,246,252,0.24) 100%);
+    background: rgb(36, 0, 16);
+    background: linear-gradient(90deg, rgba(81, 13, 65, 1) 0%, rgba(117, 19, 93, 0.74) 50%, rgba(245, 246, 252, 0.24) 100%);
 }
 
 .vis {
@@ -346,17 +353,224 @@ header {
     font-style: italic;
 }
 
-.two-vis-in-a-row {
+#menu-btn {
+    position: relative;
+}
+
+/*
+  *   Checkbox for toggle open/close dropdown menu
+  *   This code has written by myself, but inspired by Chris Coyier's content at css-tricks.com
+  *   accessed 23-10-2019
+  *   https://css-tricks.com/the-checkbox-hack/
+  *   Adapt with dropdown menu class '.menu-dropdown-items'
+  */
+#btn-toggle {
+    /* Checkbox used for toggle drop-down menu, define opacity = 0 and bring it into front layer */
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* End of referenced code : Checkbox for toggle open/close dropdown menu */
+
+#label-btn-toggle {
+    display: none;
+}
+
+#menu-toggle {
+    height: 100%;
+    padding: 1vw;
+    border-radius: 3px;
+    color: #666666;
+    font-weight: 800;
+    background-color: #ffffff;
+    background-image: linear-gradient(45deg, #ffffff 0%, #bbbbbb 100%);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/*
+  *   Dropdown menu for mobile site
+  *   This code was adapted from w3schools.com
+  *   accessed 23-10-2019
+  *   https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button
+  *   Change code by add 'border' to each menu item / Set position by using 'transform' / change appearance
+  *   Adapt checkbox '#btn-toggle:checked' to toggle dropdown menu open or close
+  *   see further comments for adaptions
+  */
+
+.menu-dropdown-items {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    position: absolute;
+    width: 40vw;
+    overflow: hidden;
+    z-index: 2;
+    transition: visibility 0s, opacity 0.25s linear, max-height 0.5s ease-out;
+}
+
+/* End of referenced code : Dropdown menu for mobile site */
+
+.main-menu-item-mobile {
+    color: #666666;
+    padding: 0.5em 0.5em;
+    background-color: #ffffff;
+    background-image: linear-gradient(45deg, #ffffff 0%, #bbbbbb 100%);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
-}
-.two-vis-in-a-row > div {
-    flex: 1 0 40%;
-    padding: 0.5vw;
+    border-bottom: 1px dotted #999999;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
-.two-vis-in-a-row > div:first-child {
-    border-right: 1px dotted #CCCCCC;
+.main-menu-item-mobile:first-child {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.main-menu-item-mobile:last-child {
+    border-radius: 0px 0px 5px 5px;
+    border-bottom: 0;
+}
+
+.main-menu-item-mobile > a {
+    color: #666666;
+    text-decoration: none;
+}
+
+/* Mobile Site */
+
+@media only screen and (max-device-width: 850px),
+(max-width: 850px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 2vw 4vw 2vw 4vw;
+    }
+
+    .mobile-menu {
+        /* Use flex (1 column) in main menu for mobile site */
+        width: 15vw;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .menu-dropdown-items {
+        transform: translate(-25vw, 25px);
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    #btn-toggle:checked~.menu-dropdown-items {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+        transition: visibility 0.5s, opacity 0.25s linear, max-height 0.5s ease-in;
+    }
+
+    .site-name {
+        padding-left: 2vw;
+    }
+
+    .content {
+        margin: 1em 10vw 1em 10vw;
+    }
+
+    .headline {
+        padding-top: 40vw;
+    }
+
+    .sub-headline {
+        padding-top: 3vw;
+        padding-bottom: 6vw;
+    }
+
+    .first-block-content {
+        margin-top: 6vw;
+    }
+
+    .last-block-content {
+        margin-bottom: 6vw;
+    }
+
+    .subtopic {
+        padding: 2vw;
+        margin: 10vw 10vw 2vw 10vw;
+    }
+
+    .vis {
+        margin: 3em 5vw 2em 5vw;
+    }
+
+    .two-vis-in-a-row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .two-vis-in-a-row>div {
+        flex: 1 0 100%;
+        padding: 0;
+    }
+
+    .two-vis-in-a-row>div:first-child {
+        border: 0;
+    }
+}
+
+@media only screen and (min-device-width: 850px),
+(min-width: 850px) {
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-menu {
+        width: 60%;
+        height: max-content;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .two-vis-in-a-row {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .two-vis-in-a-row>div {
+        flex: 1 0 40%;
+        padding: 0.5vw;
+    }
+    
+    .two-vis-in-a-row>div:first-child {
+        border-right: 1px dotted #CCCCCC;
+    }
 }
