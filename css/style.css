@@ -462,16 +462,16 @@ header {
     cursor: pointer;
 }
 
-.main-menu-item-mobile:first-child {
+.menu-dropdown-items>a:first-child>.main-menu-item-mobile {
     border-radius: 5px 0px 0px 0px;
 }
 
-.main-menu-item-mobile:last-child {
+.menu-dropdown-items>a:last-child>.main-menu-item-mobile {
     border-radius: 0px 0px 5px 5px;
     border-bottom: 0;
 }
 
-.main-menu-item-mobile>a {
+.menu-dropdown-items>a {
     color: #666666;
     text-decoration: none;
 }
