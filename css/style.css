@@ -328,7 +328,12 @@ header {
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(169,75,6, 0.74)), url("../image/topic-3.jpg");
     background-size: cover;
     background-position: bottom;
-    
+}
+
+#article-headline-4 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(156, 154, 64, 0.74)), url("../image/topic-4.jpg");
+    background-size: cover;
+    background-position: bottom;
 }
 
 .article-headline-text-part {
@@ -381,6 +386,10 @@ header {
     background: linear-gradient(90deg, rgba(36,12,0,1) 0%, rgba(169,75,6,0.74) 40%, rgba(245,246,252,0.24) 100%);
 }
 
+.subtopic-4 {
+    background: rgb(36,36,0);
+    background: linear-gradient(90deg, rgba(36,36,0,1) 0%, rgba(156,154,64,1) 40%, rgba(245,246,252,0.24) 100%);
+}
 
 .vis {
     margin: 3em 10vw 2em 10vw;
