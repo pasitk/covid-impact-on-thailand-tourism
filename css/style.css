@@ -342,6 +342,12 @@ header {
     background-position: bottom;
 }
 
+#article-headline-6 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(0, 0, 0, 0.85)), url("../image/topic-6.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
 .article-headline-text-part {
     height: max-content;
     margin-left: 10vw;
@@ -370,37 +376,66 @@ header {
 
 .subtopic {
     margin: 2.5vw 10vw 1vw 10vw;
-    padding: 1vw;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #FFFFFF;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .subtopic-1 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     background: rgb(36, 0, 16);
     background: linear-gradient(90deg, rgba(81, 13, 65, 1) 0%, rgba(117, 19, 93, 0.74) 50%, rgba(245, 246, 252, 0.24) 100%);
 }
 
 .subtopic-2 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     background: rgb(0,0,36);
     background: linear-gradient(90deg, rgba(0,0,36,1) 0%, rgba(42,42,114,0.74) 40%, rgba(245,246,252,0.24) 100%);
 }
 
 .subtopic-3 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     background: rgb(0,0,36);
     background: linear-gradient(90deg, rgba(36,12,0,1) 0%, rgba(169,75,6,0.74) 40%, rgba(245,246,252,0.24) 100%);
 }
 
 .subtopic-4 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     background: rgb(36,36,0);
     background: linear-gradient(90deg, rgba(36,36,0,1) 0%, rgba(156,154,64,1) 40%, rgba(245,246,252,0.24) 100%);
 }
 
 .subtopic-5 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     background: rgb(36,36,0);
     background: linear-gradient(90deg, rgba(16,36,0,1) 0%, rgba(97, 119, 79, 1) 40%, rgba(245,246,252,0.24) 100%);
 }
+
+.subtopic-6 {
+    margin-top: 4vw !important;
+    margin-bottom: 2vw !important;
+    color: #666666;
+    background: #c94b4b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4b134f, #c94b4b);
+    height: 0.2em; 
+}
+
+.subtopic-6 > span {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 29%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 71%, rgba(255,255,255,0) 100%);
+    padding: 1vw; 
+    position:relative; 
+    top:-0.6em;
+    left: 2vw;
+}
+
 
 .vis {
     margin: 3em 10vw 2em 10vw;
@@ -508,6 +543,11 @@ header {
     text-decoration: none;
 }
 
+.content > ul > li {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
 /* Mobile Site */
 
 @media only screen and (max-device-width: 850px),
@@ -576,8 +616,15 @@ header {
     }
 
     .subtopic {
-        padding: 2vw;
         margin: 10vw 10vw 2vw 10vw;
+    }
+
+    .subtopic-1, .subtopic-2, .subtopic-3, .subtopic-4, .subtopic-5 {
+        padding: 2vw;
+    }
+
+    .subtopic-6 {
+        margin-top: 6vw !important;
     }
 
     .vis {
@@ -638,5 +685,9 @@ header {
 
     .two-vis-in-a-row>div:first-child {
         border-right: 1px dotted #CCCCCC;
+    }
+
+    .subtopic-1, .subtopic-2, .subtopic-3, .subtopic-4, .subtopic-5 {
+        padding: 1vw;
     }
 }
