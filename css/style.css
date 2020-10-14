@@ -436,6 +436,13 @@ header {
     left: 2vw;
 }
 
+/* .subtopic-6 > span::after {
+    content: '';
+    height: 1px;
+    width: 20px;
+    background: #FFC300;
+} */
+
 
 .vis {
     margin: 3em 10vw 2em 10vw;
@@ -545,7 +552,8 @@ header {
 
 .content > ul > li {
     list-style-type: square;
-    list-style-position: inside;
+    /* list-style-position: inside; */
+    margin-left: 3em;
 }
 
 /* Mobile Site */
