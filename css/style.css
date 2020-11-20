@@ -237,6 +237,15 @@ body {
 
 /* Content Page */
 
+a:link, a:visited {
+    color: #666666;
+}
+
+a:hover {
+    color: #333333;
+}
+
+
 header {
     display: flex;
     position: fixed;
