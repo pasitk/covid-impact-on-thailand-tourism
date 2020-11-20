@@ -315,35 +315,35 @@ header {
 }
 
 #article-headline-1 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(117, 19, 93, 0.74)), url("../image/topic-1.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(117, 19, 93, 0.50)), url("../image/topic-1.jpg");
     background-size: cover;
 }
 
 #article-headline-2 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(42, 42, 114, 0.74)), url("../image/topic-2.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(42, 42, 114, 0.50)), url("../image/topic-2.jpg");
     background-size: cover;
 }
 
 #article-headline-3 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(169,75,6, 0.74)), url("../image/topic-3.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.15), rgba(169,75,6, 0.50)), url("../image/topic-3.jpg");
     background-size: cover;
     background-position: bottom;
 }
 
 #article-headline-4 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(156, 154, 64, 0.74)), url("../image/topic-4.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(156, 154, 64, 0.50)), url("../image/topic-4.jpg");
     background-size: cover;
     background-position: bottom;
 }
 
 #article-headline-5 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(97, 119, 79, 0.85)), url("../image/topic-5.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(97, 119, 79, 0.50)), url("../image/topic-5.jpg");
     background-size: cover;
     background-position: bottom;
 }
 
 #article-headline-6 {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgba(0, 0, 0, 0.85)), url("../image/topic-6.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(0, 0, 0, 0.50)), url("../image/topic-6.jpg");
     background-size: cover;
     background-position: bottom;
 }
