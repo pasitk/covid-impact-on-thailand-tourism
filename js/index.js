@@ -1,8 +1,5 @@
 $(document).ready(function () {
     $("#bg-video")
-        .css({
-            'transform': 'translate(-20%, 0%)'
-        })
         .fadeTo(2000, 1);
     $("#index-content-item-1")
         .delay(500)

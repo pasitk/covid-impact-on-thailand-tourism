@@ -1,20 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Impact of COVID-19 on Thailand's tourism industry</title>
+    <title>An insight into the impact of COVID-19 on Thailand's tourism industry</title>
+    <meta property="og:url" content="https://pasitk.github.io/covid-impact-on-thailand-tourism/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"
+        content="An insight into the impact of COVID-19 on Thailand's tourism industry" />
+    <meta property="og:description"
+        content="A dissertation project, aims to examine the impact in several categories of tourism-related business and the overall impact on Thai economy system comprehensively, and then to report these impacts in a series of features." />
+    <meta property="og:image" content="https://pasitk.github.io/covid-impact-on-thailand-tourism/image/topic-1.jpg" />
+    <meta name="keywords" content="impact of COVID-19 on Thailand's tourism industry,
+        impact of COVID-19 on Thailand tourism industry,
+        thailand travel, thai tourism, thailand, tourism, toursists, tourist, COVID-19,
+        coronavirus, economy, Thailand economy, Thailand news">
+    <meta name="author" content="Pasit Kongkunakornkul">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="image/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="image/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="image/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="image/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="image/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="image/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="image/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="image/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="image/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="image/icon/ms-icon-144x144.png">
+    <link rel="manifest" href="image/icon/manifest.json">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/fullpage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/slider.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body id="index-body">
-    <div class="slides">
-        <section class="index-content" id="index-content-1">
-            <div class="index-content-item">
-            </div>
-            <div class="index-content-item ready-to-fade-and-move-down" id="index-content-item-1">
+    <div id="fullpage">
+        <div class="section index-content" id="index-content-1">
+            <video data-autoplay muted loop id="bg-video">
+                <source src="image/bg-0.mp4" type="video/mp4">
+            </video>
+            <div class="index-content-item index-content-item-right ready-to-fade-and-move-down layer" id="index-content-item-1">
                 <div class="ready-to-fade-and-move-up" id="index-content-item-1-text">
                     <span class="index-content-header-1">Tourism industry,</span><br>
                     one of Thailand's most important economic machines<br>
@@ -23,24 +55,18 @@
                     <a href="overall.html">Click Here</a> to go to content pages
                 </div>
             </div>
-            <video autoplay muted loop id="bg-video">
-                <source src="image/bg-0.mp4" type="video/mp4">
-            </video>
-        </section>
-        <section class="index-content" id="index-content-2">
-            <div class="index-content-item " id="index-content-item-2">
+            
+        </div>
+        <div class="section index-content" id="index-content-2">
+            <div class="index-content-item index-content-item-left" id="index-content-item-2">
                 <div id="index-content-item-2-text">
                     <span class="index-content-header-1"><a href="overall.html">Click Here</a></span><br>
                     to go to the content pages
                 </div>
             </div>
-            <div class="index-content-item">
-            </div>
-        </section>
-        <section class="index-content" id="index-content-3">
-            <div class="index-content-item">
-            </div>
-            <div class="index-content-item " id="index-content-item-3">
+        </div>
+        <div class="section index-content" id="index-content-3">
+            <div class="index-content-item index-content-item-right" id="index-content-item-3">
                 <div id="index-content-item-3-text">
                     <span class="index-content-header-1">Tourism industry,</span><br>
                     one of Thailand's most important economic machines<br>
@@ -48,13 +74,44 @@
                     by the outbreak of COVID-19
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-    <div class="index-control">
-        Next
-    </div>
+    <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+    <!-- <script src="js/fullpage.js"></script> -->
     <script>
-        var mySlider = slider('.slides');
+        $(document).ready(function () {
+            var myFullpage = new fullpage('#fullpage', {
+                // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                licenseKey: '78F6AFBB-ADF241E7-BE612740-B3537C5B',
+                verticalCentered: true,
+                // anchors: ['firstPage', 'secondPage', 'thirdPage'],
+                // navigation: true,
+                // navigationPosition: 'right',
+                // navigationTooltips: ['First page', 'Second page', 'Third and last page']
+                // menu: '#menu',
+                // continuousVertical: true,
+                // afterLoad: function (anchorLink, index) {
+                //     console.log("AFTER LOAD - anchorLink:" + anchorLink + " index:" + index);
+                // },
+                // onLeave: function (index, nextIndex, direction) {
+                //     console.log("ONLEAVE - index:" + index + " nextIndex:" + nextIndex +
+                //         " direction:" + direction);
+
+                // },
+            });
+
+            // $('#fullpage').fullpage({
+            //     //options here
+            //     licenseKey: '78F6AFBB-ADF241E7-BE612740-B3537C5B',
+            //     anchors: ['firstPage', 'secondPage', '3rdPage'],
+            //     navigation: true,
+            //     navigationPosition: 'right',
+            //     navigationTooltips: ['First page', 'Second page', 'Third and last page']
+            // });
+
+            // //methods
+            // $.fn.fullpage.setAllowScrolling(false);
+        });
     </script>
 </body>
 
