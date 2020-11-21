@@ -5,8 +5,7 @@
     <title>An insight into the impact of COVID-19 on Thailand's tourism industry</title>
     <meta property="og:url" content="https://pasitk.github.io/covid-impact-on-thailand-tourism/" />
     <meta property="og:type" content="article" />
-    <meta property="og:title"
-        content="An insight into the impact of COVID-19 on Thailand's tourism industry" />
+    <meta property="og:title" content="An insight into the impact of COVID-19 on Thailand's tourism industry" />
     <meta property="og:description"
         content="A dissertation project, aims to examine the impact in several categories of tourism-related business and the overall impact on Thai economy system comprehensively, and then to report these impacts in a series of features." />
     <meta property="og:image" content="https://pasitk.github.io/covid-impact-on-thailand-tourism/image/topic-1.jpg" />
@@ -46,7 +45,8 @@
             <video data-autoplay muted loop id="bg-video">
                 <source src="image/bg-0.mp4" type="video/mp4">
             </video>
-            <div class="index-content-item index-content-item-right ready-to-fade-and-move-down layer" id="index-content-item-1">
+            <div class="index-content-item index-content-item-right ready-to-fade-and-move-down layer"
+                id="index-content-item-1">
                 <div class="ready-to-fade-and-move-up" id="index-content-item-1-text">
                     <span class="index-content-header-1">Tourism industry,</span><br>
                     one of Thailand's most important economic machines<br>
@@ -55,7 +55,7 @@
                     <a href="overall.html">Click Here</a> to go to content pages
                 </div>
             </div>
-            
+
         </div>
         <div class="section index-content" id="index-content-2">
             <div class="index-content-item index-content-item-left" id="index-content-item-2">
@@ -80,37 +80,129 @@
     <!-- <script src="js/fullpage.js"></script> -->
     <script>
         $(document).ready(function () {
-            var myFullpage = new fullpage('#fullpage', {
-                // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+            $('#fullpage').fullpage({
+                //options here
                 licenseKey: '78F6AFBB-ADF241E7-BE612740-B3537C5B',
                 verticalCentered: true,
-                // anchors: ['firstPage', 'secondPage', 'thirdPage'],
+                afterRender: function () {
+                    console.log("Test!!!")
+                    $("#bg-video")
+                        .fadeTo(1000, 1);
+                    $("#index-content-item-1").css({
+                        'transform': 'translateY(0%)',
+                        'opacity': 1,
+                        '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
+                        '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
+                        '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
+                        '-o-transition': 'opacity 1s ease-in-out, transform 1s',
+                        'transition': 'opacity 1s ease-in-out, transform 1s'
+                    });
+                    $("#index-content-item-1-text")
+                        .delay(250)
+                        .queue(function (next) {
+                            $(this).css({
+                                'transform': 'translateY(0%)',
+                                'opacity': 1,
+                                '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
+                                '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
+                                '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
+                                '-o-transition': 'opacity 1s ease-in-out, transform 1s',
+                                'transition': 'opacity 1s ease-in-out, transform 1s'
+                            });
+                            next();
+                        });
+                    $("#index-content-item-2").css({
+                        'opacity': 0,
+                        'transform': 'translateY(-20%)',
+                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
+                        'transition': 'opacity 0s ease-in-out, transform 0s'
+                    });
+                    $("#index-content-item-2-text").css({
+                        'opacity': 0,
+                        'transform': 'translateY(20%)',
+                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
+                        'transition': 'opacity 0s ease-in-out, transform 0s'
+                    });
+                    $("#index-content-item-3").css({
+                        'opacity': 0,
+                        'transform': 'translateY(-20%)',
+                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
+                        'transition': 'opacity 0s ease-in-out, transform 0s'
+                    });
+                    $("#index-content-item-3-text").css({
+                        'opacity': 0,
+                        'transform': 'translateY(20%)',
+                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
+                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
+                        'transition': 'opacity 0s ease-in-out, transform 0s'
+                    });
+                },
+                onLeave: function (origin, destination, direction) {
+                    console.log("Origin : " + origin.index);
+                    console.log("Destination : " + destination.index);
+                    if (destination) {
+                        $("#index-content-item-" + (destination.index + 1)).css({
+                            'transform': 'translateY(0%)',
+                            'opacity': 1,
+                            '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
+                            '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
+                            '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
+                            '-o-transition': 'opacity 1s ease-in-out, transform 1s',
+                            'transition': 'opacity 1s ease-in-out, transform 1s'
+                        });
+                        $("#index-content-item-" + (destination.index + 1) + "-text")
+                            .delay(250)
+                            .queue(function (next) {
+                                $(this).css({
+                                    'transform': 'translateY(0%)',
+                                    'opacity': 1,
+                                    '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
+                                    '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
+                                    '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
+                                    '-o-transition': 'opacity 1s ease-in-out, transform 1s',
+                                    'transition': 'opacity 1s ease-in-out, transform 1s'
+                                });
+                                next();
+                            });
+                    }
+
+                    if (origin) {
+                        $("#index-content-item-" + (origin.index + 1)).css({
+                            'opacity': 0,
+                            'transform': 'translateY(-20%)',
+                            '-webkit-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            '-moz-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            '-ms-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            '-o-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            'transition': 'opacity 0.5s ease-in-out, transform 0.5s'
+                        });
+                        $("#index-content-item-" + (origin.index + 1) + "-text").css({
+                            'opacity': 0,
+                            'transform': 'translateY(20%)',
+                            '-webkit-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            '-moz-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            '-ms-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            '-o-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+                            'transition': 'opacity 0.5s ease-in-out, transform 0.5s'
+                        })
+                    }
+                }
+                // anchors: ['firstPage', 'secondPage', '3rdPage'],
                 // navigation: true,
                 // navigationPosition: 'right',
                 // navigationTooltips: ['First page', 'Second page', 'Third and last page']
-                // menu: '#menu',
-                // continuousVertical: true,
-                // afterLoad: function (anchorLink, index) {
-                //     console.log("AFTER LOAD - anchorLink:" + anchorLink + " index:" + index);
-                // },
-                // onLeave: function (index, nextIndex, direction) {
-                //     console.log("ONLEAVE - index:" + index + " nextIndex:" + nextIndex +
-                //         " direction:" + direction);
-
-                // },
             });
-
-            // $('#fullpage').fullpage({
-            //     //options here
-            //     licenseKey: '78F6AFBB-ADF241E7-BE612740-B3537C5B',
-            //     anchors: ['firstPage', 'secondPage', '3rdPage'],
-            //     navigation: true,
-            //     navigationPosition: 'right',
-            //     navigationTooltips: ['First page', 'Second page', 'Third and last page']
-            // });
-
-            // //methods
-            // $.fn.fullpage.setAllowScrolling(false);
         });
     </script>
 </body>
