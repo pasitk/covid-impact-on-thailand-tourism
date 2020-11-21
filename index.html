@@ -48,11 +48,9 @@
             <div class="index-content-item index-content-item-right ready-to-fade-and-move-down layer"
                 id="index-content-item-1">
                 <div class="ready-to-fade-and-move-up" id="index-content-item-1-text">
-                    <span class="index-content-header-1">Tourism industry,</span><br>
-                    one of Thailand's most important economic machines<br>
-                    has been heavily damaged<br>
-                    by the outbreak of COVID-19<br>
-                    <a href="overall.html">Click Here</a> to go to content pages
+                    <span class="index-content-header-1">COVID-19</span><br>
+                    An infectious disease which was discovered in 2019, and has caused a pandemic worldwide. Many
+                    people's lives were lost, and global economy has been devastated.
                 </div>
             </div>
 
@@ -60,19 +58,28 @@
         <div class="section index-content" id="index-content-2">
             <div class="index-content-item index-content-item-left" id="index-content-item-2">
                 <div id="index-content-item-2-text">
-                    <span class="index-content-header-1"><a href="overall.html">Click Here</a></span><br>
-                    to go to the content pages
+                    <span class="index-content-header-1">In Thailand,</span><br>
+                    as of mid-November 2020, <span class="index-content-header-1">60 people</span> sadly passed away.
+                    The economy has been damaged, and one of the most severely hit industry is <span
+                        class="index-content-header-2">'tourism'</span>.
                 </div>
             </div>
         </div>
         <div class="section index-content" id="index-content-3">
             <div class="index-content-item index-content-item-right" id="index-content-item-3">
                 <div id="index-content-item-3-text">
-                    <span class="index-content-header-1">Tourism industry,</span><br>
-                    one of Thailand's most important economic machines<br>
-                    has been heavily damaged<br>
-                    by the outbreak of COVID-19
+                    In the first nine month of 2020, the receipts from visitors who visited Thailand <span
+                        class="index-content-header-3">dropped more than half</span> of what they were in 2019,
+                    according to official statistics.<br />
+                    <br />
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/4426044">
+                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                    </div>
+                    Now, we're bringing you to the insight into the impact of COVID-19 on Thailand's tourism industry...
                 </div>
+            </div>
+            <div class="index-content-item index-content-item-btn" id="index-content-item-3-btn">
+                <a href="overall.html">Enter the website</a>
             </div>
         </div>
     </div>
@@ -87,65 +94,12 @@
                 afterRender: function () {
                     $("#bg-video")
                         .fadeTo(1000, 1);
-                    $("#index-content-item-1").css({
-                        'transform': 'translateY(0%)',
-                        'opacity': 1,
-                        '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
-                        '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
-                        '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
-                        '-o-transition': 'opacity 1s ease-in-out, transform 1s',
-                        'transition': 'opacity 1s ease-in-out, transform 1s'
-                    });
-                    $("#index-content-item-1-text")
-                        .delay(250)
-                        .queue(function (next) {
-                            $(this).css({
-                                'transform': 'translateY(0%)',
-                                'opacity': 1,
-                                '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
-                                '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
-                                '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
-                                '-o-transition': 'opacity 1s ease-in-out, transform 1s',
-                                'transition': 'opacity 1s ease-in-out, transform 1s'
-                            });
-                            next();
-                        });
-                    $("#index-content-item-2").css({
-                        'opacity': 0,
-                        'transform': 'translateY(-20%)',
-                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
-                        'transition': 'opacity 0s ease-in-out, transform 0s'
-                    });
-                    $("#index-content-item-2-text").css({
-                        'opacity': 0,
-                        'transform': 'translateY(20%)',
-                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
-                        'transition': 'opacity 0s ease-in-out, transform 0s'
-                    });
-                    $("#index-content-item-3").css({
-                        'opacity': 0,
-                        'transform': 'translateY(-20%)',
-                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
-                        'transition': 'opacity 0s ease-in-out, transform 0s'
-                    });
-                    $("#index-content-item-3-text").css({
-                        'opacity': 0,
-                        'transform': 'translateY(20%)',
-                        '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
-                        '-o-transition': 'opacity 0s ease-in-out, transform 0s',
-                        'transition': 'opacity 0s ease-in-out, transform 0s'
-                    });
+                    showItemOnRenderSmoothly(true, 1);
+                    showItemOnRenderSmoothly(false, 1)
+                    for (var i = 2; i < 4; i++) {
+                        hideItemOnRender(true, i, true);
+                        hideItemOnRender(false, i, false);
+                    }
                 },
                 onLeave: function (origin, destination, direction) {
                     if (destination) {
@@ -157,11 +111,9 @@
                         hideItemSmoothly(true, origin, true);
                         hideItemSmoothly(false, origin, false);
                     }
-                }
-                // anchors: ['firstPage', 'secondPage', '3rdPage'],
-                // navigation: true,
-                // navigationPosition: 'right',
-                // navigationTooltips: ['First page', 'Second page', 'Third and last page']
+                },
+                navigation: true,
+                navigationPosition: 'right',
             });
         });
     </script>
