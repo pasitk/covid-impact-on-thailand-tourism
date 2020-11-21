@@ -85,7 +85,6 @@
                 licenseKey: '78F6AFBB-ADF241E7-BE612740-B3537C5B',
                 verticalCentered: true,
                 afterRender: function () {
-                    console.log("Test!!!")
                     $("#bg-video")
                         .fadeTo(1000, 1);
                     $("#index-content-item-1").css({
@@ -149,53 +148,14 @@
                     });
                 },
                 onLeave: function (origin, destination, direction) {
-                    console.log("Origin : " + origin.index);
-                    console.log("Destination : " + destination.index);
                     if (destination) {
-                        $("#index-content-item-" + (destination.index + 1)).css({
-                            'transform': 'translateY(0%)',
-                            'opacity': 1,
-                            '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
-                            '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
-                            '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
-                            '-o-transition': 'opacity 1s ease-in-out, transform 1s',
-                            'transition': 'opacity 1s ease-in-out, transform 1s'
-                        });
-                        $("#index-content-item-" + (destination.index + 1) + "-text")
-                            .delay(250)
-                            .queue(function (next) {
-                                $(this).css({
-                                    'transform': 'translateY(0%)',
-                                    'opacity': 1,
-                                    '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
-                                    '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
-                                    '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
-                                    '-o-transition': 'opacity 1s ease-in-out, transform 1s',
-                                    'transition': 'opacity 1s ease-in-out, transform 1s'
-                                });
-                                next();
-                            });
+                        showItemSmoothly(true, destination);
+                        showItemSmoothly(false, destination);
                     }
 
                     if (origin) {
-                        $("#index-content-item-" + (origin.index + 1)).css({
-                            'opacity': 0,
-                            'transform': 'translateY(-20%)',
-                            '-webkit-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            '-moz-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            '-ms-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            '-o-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            'transition': 'opacity 0.5s ease-in-out, transform 0.5s'
-                        });
-                        $("#index-content-item-" + (origin.index + 1) + "-text").css({
-                            'opacity': 0,
-                            'transform': 'translateY(20%)',
-                            '-webkit-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            '-moz-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            '-ms-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            '-o-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
-                            'transition': 'opacity 0.5s ease-in-out, transform 0.5s'
-                        })
+                        hideItemSmoothly(true, origin, true);
+                        hideItemSmoothly(false, origin, false);
                     }
                 }
                 // anchors: ['firstPage', 'secondPage', '3rdPage'],

@@ -1,58 +1,33 @@
-$(document).ready(function () {
-    // $("#bg-video")
-    //     .fadeTo(2000, 1);
-    // $("#index-content-item-1")
-    //     .delay(500)
-    //     .queue(function (next) {
-    //         $(this).css({
-    //             'transform': 'translateY(0%)',
-    //             'opacity': 1,
-    //             '-webkit-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             '-moz-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             '-ms-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             '-o-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             'transition': 'opacity 2s ease-in-out, transform 2s'
-    //         });
-    //         next();
-    //     });
-    // $("#index-content-item-1-text")
-    //     .delay(1000)
-    //     .queue(function (next) {
-    //         $(this).css({
-    //             'transform': 'translateY(0%)',
-    //             'opacity': 1,
-    //             '-webkit-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             '-moz-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             '-ms-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             '-o-transition': 'opacity 2s ease-in-out, transform 2s',
-    //             'transition': 'opacity 2s ease-in-out, transform 2s'
-    //         });
-    //         next();
-    //     });
-})
+function hideItemSmoothly(isBox, item, isUp) { // isBox: yes = box, no = text / isUp: yes = up, no = down
+    var transformText = isUp ? "translateY(-20%)" : "translateY(20%)";
+    var queryItemText = isBox ? "#index-content-item-" + (item.index + 1) : "#index-content-item-" + (item.index + 1) + "-text";
+    $(queryItemText).css({
+        'opacity': 0,
+        'transform': transformText,
+        '-webkit-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+        '-moz-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+        '-ms-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+        '-o-transition': 'opacity 0.5s ease-in-out, transform 0.5s',
+        'transition': 'opacity 0.5s ease-in-out, transform 0.5s'
+    });
+}
 
-// $(document).on("rerunAnimation", function () {
-//     console.log("Rerun");
-//     $("#index-content-item-2-text").css({
-//             'opacity': 0,
-//             'transform': 'translateY(20%)',
-//             '-webkit-transition': 'opacity 0s ease-in-out, transform 0s',
-//             '-moz-transition': 'opacity 0s ease-in-out, transform 0s',
-//             '-ms-transition': 'opacity 0s ease-in-out, transform 0s',
-//             '-o-transition': 'opacity 0s ease-in-out, transform 0s',
-//             'transition': 'opacity 0s ease-in-out, transform 0s'
-//         })
-//         .delay(1000)
-//         .queue(function (next) {
-//             $(this).css({
-//                 'transform': 'translateY(0%)',
-//                 'opacity': 1,
-//                 '-webkit-transition': 'opacity 2s ease-in-out, transform 2s',
-//                 '-moz-transition': 'opacity 2s ease-in-out, transform 2s',
-//                 '-ms-transition': 'opacity 2s ease-in-out, transform 2s',
-//                 '-o-transition': 'opacity 2s ease-in-out, transform 2s',
-//                 'transition': 'opacity 2s ease-in-out, transform 2s'
-//             });
-//             next();
-//         });
-// });
+function showItemSmoothly(isBox, item) { // isBox: yes = box, no = text
+    var queryItemText = isBox ? "#index-content-item-" + (item.index + 1) : "#index-content-item-" + (item.index + 1) + "-text";
+    var delayMillisec = isBox ? 0:250;
+
+    $(queryItemText)
+        .delay(delayMillisec)
+        .queue(function (next) {
+            $(this).css({
+                'transform': 'translateY(0%)',
+                'opacity': 1,
+                '-webkit-transition': 'opacity 1s ease-in-out, transform 1s',
+                '-moz-transition': 'opacity 1s ease-in-out, transform 1s',
+                '-ms-transition': 'opacity 1s ease-in-out, transform 1s',
+                '-o-transition': 'opacity 1s ease-in-out, transform 1s',
+                'transition': 'opacity 1s ease-in-out, transform 1s'
+            });
+            next();
+        });
+}
