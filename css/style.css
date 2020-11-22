@@ -249,6 +249,12 @@ body {
     margin-bottom: 250px;
 }
 
+/* #index-content-1 {
+    background-image: url("../image/bg-0.jpg");
+    background-size: cover;
+    background-position: center;
+} */
+
 #index-content-2 {
     background-image: url("../image/bg-1.jpg");
     background-size: cover;
@@ -341,6 +347,11 @@ header {
     padding-left: 1vw;
 }
 
+.site-name>a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .bigger-one {
     font-size: 1.2rem;
 }
@@ -353,15 +364,6 @@ header {
     margin-top: 0.3vw;
     font-weight: 200;
 }
-
-/* .desktop-menu {
-    width: 60%;
-    height: max-content;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: stretch;
-} */
 
 .desktop-menu>div {
     flex: 1 0 30%;
