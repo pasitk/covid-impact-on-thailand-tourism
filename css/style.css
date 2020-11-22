@@ -286,16 +286,27 @@ body {
     background-position: center center;
 }
 
-
 .index-control {
     position: absolute;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.index-control-intro {
     right: 2vw;
     bottom: 2vh;
-    z-index: 1;
-    font-size: 1vw;
     background-color:rgba(0, 0, 0, 0.5);
-    font-weight: 400;
     padding: 0.5vw;
+}
+
+.index-control-content {
+    right: 0;
+    bottom: 0.5vh;
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
 }
 
 .ready-to-fade {
@@ -372,7 +383,17 @@ header {
 
 .desktop-menu>div {
     flex: 1 0 30%;
-    padding: 0.5vw;
+    margin: 0.5vw;
+    padding-left: 0.5vw;    
+    height: fit-content;
+}
+
+.desktop-menu>div.feature-menu {
+    border-left: 3px solid #FFC300;
+}
+
+.desktop-menu>div.supplementary-menu {
+    border-left: 3px solid #7eaec8;
 }
 
 .desktop-menu>div a {
@@ -385,8 +406,15 @@ header {
     width: 0px;
     height: 1px;
     display: block;
-    background-image: linear-gradient(90deg, rgba(255, 195, 0, 1) 0%, rgba(255, 195, 0, 1) 100%);
     transition: 300ms;
+}
+
+.desktop-menu>div.feature-menu a::after {
+    background-image: linear-gradient(90deg, #FFC300 0%, #FFC300 100%);
+}
+
+.desktop-menu>div.supplementary-menu a::after {
+    background-image: linear-gradient(90deg, #7eaec8 0%, #7eaec8 100%);
 }
 
 .desktop-menu>div a:hover::after {
@@ -399,6 +427,7 @@ header {
     color: #ffffff;
     vertical-align: bottom;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 #article-headline-1 {
@@ -451,7 +480,7 @@ header {
 
 .sub-headline {
     padding-top: 1vw;
-    padding-bottom: 2.5vw;
+    padding-bottom: 3vw;
     font-size: 1.2rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -721,7 +750,7 @@ header {
 
     .sub-headline {
         padding-top: 3vw;
-        padding-bottom: 6vw;
+        padding-bottom: 8vw;
     }
 
     .first-block-content {
