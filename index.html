@@ -53,7 +53,9 @@
                     people's lives were lost, and global economy has been devastated.
                 </div>
             </div>
-
+            <div class="index-control ready-to-fade" id="index-content-item-1-btn">
+                Scroll down or <a href="overall.html">click here</a> to skip&nbsp;&nbsp;|&nbsp;&nbsp;Video : <a href="https://www.cdc.gov/media/video/fullvideo/covid-19/Element-coronavirus_32s-background-1080.mp4" target="_blank">CDC</a>
+            </div>
         </div>
         <div class="section index-content" id="index-content-2">
             <div class="index-content-item index-content-item-left" id="index-content-item-2">
@@ -63,6 +65,9 @@
                     The economy has been damaged, and one of the most severely hit industry is <span
                         class="index-content-header-2">'tourism'</span>.
                 </div>
+            </div>
+            <div class="index-control" id="index-content-item-2-btn">
+                Scroll down or <a href="overall.html">click here</a> to skip&nbsp;&nbsp;|&nbsp;&nbsp;Photo : Pasit Kongkunakornkul
             </div>
         </div>
         <div class="section index-content" id="index-content-3">
@@ -81,6 +86,9 @@
             <div class="index-content-item index-content-item-btn" id="index-content-item-3-btn">
                 <a href="overall.html">Enter the website</a>
             </div>
+            <div class="index-control" id="index-content-item-4-btn">
+                Photo : <a href="https://unsplash.com/photos/4IxDYSObczc" target="_blank">Dave Kim</a>
+            </div>
         </div>
     </div>
     <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
@@ -95,21 +103,27 @@
                     $("#bg-video")
                         .fadeTo(1000, 1);
                     showItemOnRenderSmoothly(true, 1);
-                    showItemOnRenderSmoothly(false, 1)
+                    showItemOnRenderSmoothly(false, 1);
+                    showBtnOnRenderSmoothly(1);
                     for (var i = 2; i < 4; i++) {
                         hideItemOnRender(true, i, true);
                         hideItemOnRender(false, i, false);
+                    }
+                    for (var i = 2; i < 5; i++) {
+                        hideBtnOnRender(i);
                     }
                 },
                 onLeave: function (origin, destination, direction) {
                     if (destination) {
                         showItemSmoothly(true, destination);
                         showItemSmoothly(false, destination);
+                        showBtnSmoothly(destination);
                     }
 
                     if (origin) {
                         hideItemSmoothly(true, origin, true);
                         hideItemSmoothly(false, origin, false);
+                        hideBtnSmoothly(origin);
                     }
                 },
                 navigation: true,
