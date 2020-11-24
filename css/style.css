@@ -264,6 +264,11 @@ body {
 }
 
 #index-content-3 {
+    /*
+    *   Background Images by Dave Kim on unsplash.com
+    *   accessed 21-11-2020
+    *   https://unsplash.com/photos/4IxDYSObczc
+    */
     background-image: url("../image/bg-2.jpg");
     background-size: cover;
     background-position: center;
@@ -440,11 +445,21 @@ header {
 }
 
 #article-headline-1 {
+    /*
+    *   Background Images by Dan Freeman on unsplash.com
+    *   accessed 08-10-2020
+    *   https://unsplash.com/photos/G4E6PcOt4Ps
+    */
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(117, 19, 93, 0.50)), url("../image/topic-1.jpg");
     background-size: cover;
 }
 
 #article-headline-2 {
+    /*
+    *   Background Images by Kelly Lacy on pexels.com
+    *   accessed 09-10-2020
+    *   https://www.pexels.com/photo/two-pilots-flying-an-airplane-2898316/
+    */
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(42, 42, 114, 0.50)), url("../image/topic-2.jpg");
     background-size: cover;
 }
@@ -456,18 +471,33 @@ header {
 }
 
 #article-headline-4 {
+    /*
+    *   Background Images by Hanny Naibaho on unsplash.com
+    *   accessed 10-10-2020
+    *   https://unsplash.com/photos/wzgt7LX6b3E
+    */
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(156, 154, 64, 0.50)), url("../image/topic-4.jpg");
     background-size: cover;
     background-position: bottom;
 }
 
 #article-headline-5 {
+    /*
+    *   Background Images by Sara Dubler on unsplash.com
+    *   accessed 10-10-2020
+    *   https://unsplash.com/photos/Koei_7yYtIo
+    */
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(97, 119, 79, 0.50)), url("../image/topic-5.jpg");
     background-size: cover;
     background-position: bottom;
 }
 
 #article-headline-6 {
+    /*
+    *   Background Images by Kevin Ku on pexels.com
+    *   accessed 13-10-2020
+    *   https://www.pexels.com/photo/coding-computer-data-depth-of-field-577585/
+    */
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.25), rgba(0, 0, 0, 0.50)), url("../image/topic-6.jpg");
     background-size: cover;
     background-position: bottom;
