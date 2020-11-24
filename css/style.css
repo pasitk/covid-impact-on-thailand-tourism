@@ -585,7 +585,7 @@ header {
 /*
   *   Checkbox for toggle open/close dropdown menu
   *   This code has written by myself, but inspired by Chris Coyier's content at css-tricks.com
-  *   accessed 23-10-2019
+  *   accessed 24-11-2020
   *   https://css-tricks.com/the-checkbox-hack/
   *   Adapt with dropdown menu class '.menu-dropdown-items'
   */
@@ -620,7 +620,7 @@ header {
 /*
   *   Dropdown menu for mobile site
   *   This code was adapted from w3schools.com
-  *   accessed 23-10-2019
+  *   accessed 24-11-2020
   *   https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button
   *   Change code by add 'border' to each menu item / Set position by using 'transform' / change appearance
   *   Adapt checkbox '#btn-toggle:checked' to toggle dropdown menu open or close
